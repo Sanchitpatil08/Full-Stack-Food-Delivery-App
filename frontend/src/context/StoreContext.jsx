@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
-  const url = 'https://full-stack-food-delivery-app-bnpw.vercel.app/';
+  const url = 'https://full-stack-food-delivery-app-bnpw.vercel.app';
 
   const [token, setToken] = useState("");
 
