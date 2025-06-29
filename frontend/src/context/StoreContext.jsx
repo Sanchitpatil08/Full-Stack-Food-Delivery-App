@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
-  const url = 'https://full-stack-food-delivery-app-bnpw.vercel.app';
+  const url = 'https://full-stack-food-delivery-app-zsmy.onrender.com';
 
   const [token, setToken] = useState("");
 
@@ -49,7 +49,7 @@ const StoreContextProvider = (props) => {
 
   const loadCartData = async (token) => {
     const response = await axios.post(url + "/api/cart/get", {}, { headers: { token } });
-    setCartItems(response.data.cartData)
+    setCartItems(response.data.cartData ?? {})
   }
 
 
